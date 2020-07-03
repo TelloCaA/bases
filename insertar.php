@@ -17,7 +17,6 @@
 
     $consulta = " INSERT INTO alumnos(id, nombre, apellido_p, apellido_m, dia_n, mes_n, ano_n) VALUES ('', '$snombre' , '$sapep' , '$sapem' , '$sdia', '$smes', '$sano') ";
 
-    $consulta2
 
     $resultado = mysqli_query($conexion, $consulta);
 
