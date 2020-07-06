@@ -1,6 +1,6 @@
-<? php
+<?php
 
-	$usuario = 'root';
+    $usuario = 'root';
     $contra = '';
     $server = '127.0.0.1';
     $basedatos = 'alumnos';
@@ -8,12 +8,21 @@
 
     $conexion = mysqli_connect($server, $usuario, $contra, $basedatos , $port);
 
-    if(!conexion)
+
+    $vari = ($_POST['uwu']);
+
+    $consul = "DELETE FROM alumnos WHERE nombre = '$vari' ";
+
+    $resultado = mysqli_query($conexion, $consul);
+
+    if(!$resultado)
     {
-    	echo("Conexion fallida");
+      echo "Error al eliminar";
     }
     else
     {
-    	echo ("Conexion establecida");
+      echo "Usuario eliminado";
     }
+
+
 ?>
